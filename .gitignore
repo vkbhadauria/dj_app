@@ -1,0 +1,7 @@
+env
+env_eb1
+aws-elastic-beanstalk-cli-setup
+req.txt
+__pycache__
+staticfiles
+static
