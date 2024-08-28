@@ -5,14 +5,12 @@ phases:
     runtime-versions:
       python: 3.9
     commands:
-      - cd dj_app
       - echo Installing dependencies...
       - pip install --upgrade pip
       - pip install -r requirments.txt
 
   pre_build:
     commands:
-      - cd dj_app
       - echo Applying database migrations...
       - python manage.py migrate
 
@@ -23,7 +21,6 @@ phases:
 
   post_build:
     commands:
-      - cd dj_app
       - echo Build completed successfully.
       - echo Collecting static files...
       - python manage.py collectstatic --noinput
