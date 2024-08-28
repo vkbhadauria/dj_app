@@ -8,7 +8,7 @@ phases:
       - cd dj_app
       - echo Installing dependencies...
       - pip install --upgrade pip
-      - pip install -r requirements.txt
+      - pip install -r requirments.txt
 
   pre_build:
     commands:
