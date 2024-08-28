@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo Installing dependencies...
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+
+  pre_build:
+    commands:
+      - echo Applying database migrations...
+      - python manage.py migrate
+
+  build:
+    commands:
+      - echo Running Django tests...
+      - python manage.py test
+
+  post_build:
+    commands:
+      - echo Build completed successfully.
+      - echo Collecting static files...
+      - python manage.py collectstatic --noinput
+
+  base-directory: .
