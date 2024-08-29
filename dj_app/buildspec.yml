@@ -19,6 +19,9 @@ phases:
     commands:
       - echo Running Django tests...
       - python manage.py test
+  artifacts:
+    files:
+      - '**/*'
 
   post_build:
     commands:
