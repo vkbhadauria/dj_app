@@ -29,3 +29,4 @@ phases:
 artifacts:
   files:
     - dj_app.zip
+  discard-paths: yes
