@@ -15,8 +15,3 @@ hooks:
     - location: deployment_script/start_server.sh
       timeout: 300
       runas: root
-
-  ApplicationStop:
-    - location: deployment_script/stop_server.sh
-      timeout: 300
-      runas: root
