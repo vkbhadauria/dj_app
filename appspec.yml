@@ -11,11 +11,6 @@ hooks:
       timeout: 300
       runas: root
 
-  AfterInstall:
-    - location: deployment_script/unzip_app.sh
-      timeout: 300
-      runas: root
-
   ApplicationStart:
     - location: deployment_script/start_server.sh
       timeout: 300

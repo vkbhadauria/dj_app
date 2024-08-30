@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /var/www/dj_app
+cd /home/ubuntu/vivek/myapp
 unzip -o dj_app.zip
