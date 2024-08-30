@@ -28,7 +28,7 @@ phases:
       - zip -r dj_app.zip *
 
 artifacts:
-  base-directory: .
+  base-directory: dj_app
   files:
     - dj_app.zip
   discard-paths: yes
