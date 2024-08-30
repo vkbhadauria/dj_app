@@ -28,8 +28,6 @@ phases:
       - zip -r dj_app.zip *
 
 artifacts:
-  base-directory: dj_app
   files:
-    - dj_app.zip
-    - appspec.yml
+    - '**/*''
   discard-paths: yes
