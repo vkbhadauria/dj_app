@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /dj_app.zip
+    destination: /var/www/djapp
+
+hooks:
+  BeforeInstall:
+    - location: deployment_script/install_requirements.sh
+      timeout: 300
+      runas: ec2-user
+
+  AfterInstall:
+    - locaton: deployment_script/unzip_app.sh
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStart:
+    - location: deployment_script/start_server.sh
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStop:
+    - location: deployment_script/stop_server.sh
+      timeout: 300
+      runas: ec2-user

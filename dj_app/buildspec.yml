@@ -8,7 +8,7 @@ phases:
       - cd dj_app
       - echo Installing dependencies...
       - pip install --upgrade pip
-      - pip install -r requirments.txt
+      - pip install -r requirements.txt
 
   pre_build:
     commands:
@@ -28,4 +28,4 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - dj_app.zip
