@@ -31,4 +31,5 @@ artifacts:
   base-directory: dj_app
   files:
     - dj_app.zip
+    - appspec.yml
   discard-paths: yes
